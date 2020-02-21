@@ -1,0 +1,52 @@
+{{#partial "content"}}
+    <h1 id="index-title">Agribusiness</h1>
+
+    {{#if farmers}}
+        <table id="farmers">
+        <tr>
+            <th>Farmer</th>
+            <th>Location</th>
+            <th>Quantity</th>
+            <th>Breed</th>
+        </tr>
+        </table>
+        {{#each farmers}}
+            <table id="farmers">
+                <tr>
+                    <td>{{farmerName}}</td>
+                    <td>{{location}}</td>
+                    <td>{{quantity}}</td>
+                    <td>{{breed}}</td>
+                </tr>
+            </table>
+        {{/each}}
+    {{/if}}
+
+    <style>
+#farmers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#farmers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#farmers tr:nth-child(even){background-color: #f2f2f2;}
+
+#farmers tr:hover {background-color: #ddd;}
+
+#farmers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+    </style>
+
+{{/partial}}
+
+{{> layout.hbs}}

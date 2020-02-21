@@ -1,0 +1,18 @@
+{{#partial "content"}}
+    <h1>Add a farmer</h1>
+
+    <form action="/farmers/new" method="post">
+        <label for="farmerName">farmerName</label>
+        <input class="form-control form-control-lg" id="farmerName" name="farmerName" type="text">
+        <label for="location">farmer location</label>
+        <input class="form-control form-control-lg" id="location" name="location" type="text">
+        <label for="quantity">quantity</label>
+        <input class="form-control form-control-lg" id="quantity" name="quantity" type="text">
+        <label for="breed">breed</label>
+        <input class="form-control form-control-lg" id="breed" name="breed" type="text">
+        <button type="submit" class="btn btn-default">Go!</button>
+    </form>
+
+{{/partial}}
+
+{{> layout.hbs}}
